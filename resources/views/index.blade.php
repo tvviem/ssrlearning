@@ -16,9 +16,7 @@
 <body>
     <div id="app">
         <v-app>
-            <v-content>
-                <example-component></example-component>
-            </v-content>
+            <login-form></login-form>
         </v-app>
     </div>
 </body>
