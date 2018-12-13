@@ -1,15 +1,25 @@
 <template>
-    <v-alert @input="onClose" dismissible type="error" :value="true">
-      {{ text }}
-    </v-alert>
+    <v-snackbar :value="snackbar" :color="color" :timeout="timeshow">
+      {{ content }}
+      <!-- <v-btn dark flat @click="showed=false">Close</v-btn> -->
+    </v-snackbar>
 </template>
 
 <script>
 export default {
-  props: ['text'],
-  methods: {
-    onClose () {
-      this.$emit('dismissed')
+  props: ['msgContent', 'typeMsg', 'timeout', 'snackbar'],
+  computed: {
+    showed() {
+      return this.snackbar;
+    },
+    color() {
+      return this.typeMsg;
+    },
+    timeshow() {
+      return this.timeout;
+    },
+    content() {
+      return this.msgContent;
     }
   }
 }

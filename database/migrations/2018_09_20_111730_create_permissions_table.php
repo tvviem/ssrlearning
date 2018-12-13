@@ -20,6 +20,7 @@ class CreatePermissionsTable extends Migration
             $table->string('title', 100); // tooltip text in browser
             $table->string('icon_class', 40); // class icon
             $table->string('route_link', 100); // route_link
+            //$table->boolean('is_actived')->default(false); // actived permission
             $table->timestamps();
         });
     }

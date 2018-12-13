@@ -15,9 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <v-app>
-            <login-form></login-form>
-        </v-app>
+        <router-view></router-view>
     </div>
 </body>
 </html>
